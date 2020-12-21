@@ -27,7 +27,6 @@ public class HtmlController {
     }
     @PostMapping("/updateStudent")
     public String update(@ModelAttribute Student student){
-        studentRepository.deleteById(student.getStudent_id());
         studentRepository.save(student);
         return "redirect:/index";
     }

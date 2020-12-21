@@ -31,7 +31,8 @@ public class StudentController {
     }
     @PutMapping("/updateStudent/{id}")
     public ResponseEntity updateOneStudent(@PathVariable("id") int id,@RequestBody Student student){
-        Student student1=studentRepositoryRepository.findById(student.getStudent_id()).orElseThrow(() -> new ResourceNotFoundException("Not found Tutorial with id = " + id));;
+        Student student1=studentRepositoryRepository.findById(student.getStudent_id())
+                .orElseThrow(() -> new ResourceNotFoundException("Not found Tutorial with id = " + id));
         student1.setFirst_name(student.getFirst_name());
         student1.setSecond_name(student.getSecond_name());
         student1.setAge(student.getAge());

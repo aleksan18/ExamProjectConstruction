@@ -5,6 +5,7 @@
   <title>Construction Exam Project</title>
 </head>
 <body>
+<h1>Add students</h1>
 <form method="post" action="/createStudent">
   <label>First Name: </label>
   <input name="first_name" type="text"><br><br>
@@ -26,8 +27,9 @@
     <option th:text="'Teacher'+${supervisior.supervisior_id}" th:value="${supervisior.supervisior_id}"></option>
     </div>
   </select><br><br>
-  <input type="submit" value="Create Student">
-</form><br><br>
+  <input type="submit" value="Add Student">
+</form><br>
+<h1>List of Students</h1>
 <div th:each="students:${listOfStudents}">
 <form action="/updateStudent" method="post" >
   <input name="student_id" type="hidden" th:value="${students.student_id}">
