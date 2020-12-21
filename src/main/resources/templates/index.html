@@ -2,10 +2,10 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <title>Construction Exam Project</title>
 </head>
 <body>
-<form method="post" action="/html/createStudent">
+<form method="post" action="/createStudent">
   <label>First Name: </label>
   <input name="first_name" type="text"><br><br>
   <label>Second Name:</label>
@@ -29,7 +29,7 @@
   <input type="submit" value="Create Student">
 </form>
 <div th:each="students:${listOfStudents}">
-<form action="/html/updateStudent" method="post" >
+<form action="/updateStudent" method="post" >
   <input name="student_id" type="hidden" th:value="${students.student_id}">
   <label>First Name: </label>
   <input name="first_name" type="text" th:value="${students.first_name}">
@@ -53,7 +53,7 @@
   </select>
   <input value="Update" type="submit" >
 </form>
-  <a th:href="@{'/html/deleteStudent/'+${students.student_id}}"><button onclick="return confirmDelete()">Delete</button></a>
+  <a th:href="@{'/deleteStudent/'+${students.student_id}}"><button onclick="return confirmDelete()">Delete</button></a>
 </div>
 </body>
 <script th:inline="javascript">

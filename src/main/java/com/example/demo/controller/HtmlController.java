@@ -9,7 +9,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller()
-@RequestMapping("/html")
 public class HtmlController {
     @Autowired
     StudentRepository studentRepository;
@@ -24,18 +23,18 @@ public class HtmlController {
     @PostMapping("/createStudent")
     public String createStudent(@ModelAttribute Student student){
     studentRepository.save(student);
-    return "redirect:/html/index";
+    return "redirect:/index";
     }
     @PostMapping("/updateStudent")
     public String update(@ModelAttribute Student student){
         studentRepository.deleteById(student.getStudent_id());
         studentRepository.save(student);
-        return "redirect:/html/index";
+        return "redirect:/index";
     }
     @GetMapping("/deleteStudent/{student_id}")
     public String delete(@PathVariable("student_id") int id){
         studentRepository.deleteById(id);
-        return "redirect:/html/index";
+        return "redirect:/index";
     }
 
 }
