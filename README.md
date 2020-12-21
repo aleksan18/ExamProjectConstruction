@@ -1,7 +1,7 @@
 # ExamProjectConstruction
 Hello This is Aleksandar and this is my Exam Project for the Construction Exam.
 Read through this file to set up the application.<br />
-1.Unarchive the files, open the project folder with any dev enviroment you use. For easier setup I suggest InteliJ.<br />
+1.Unarchive the files or download them from GitHub https://github.com/aleksan18/ExamProjectConstruction.git, open the project folder with any dev enviroment you use. For easier setup I suggest InteliJ.<br />
 2.Run the SQL script in MYSQL Workbench<br />
 3.Open the application properties and change the mysql password and username to what you use on your machine.<br />
 4.Click the Database tab on the right ->Data Source Properties in the tab that opened-> Enter the username and password again and the URL for the MySQL table(can copy it from the application properties)<br />
