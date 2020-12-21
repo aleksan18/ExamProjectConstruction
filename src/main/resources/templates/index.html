@@ -27,7 +27,7 @@
     </div>
   </select><br><br>
   <input type="submit" value="Create Student">
-</form>
+</form><br><br>
 <div th:each="students:${listOfStudents}">
 <form action="/updateStudent" method="post" >
   <input name="student_id" type="hidden" th:value="${students.student_id}">
@@ -54,6 +54,7 @@
   <input value="Update" type="submit" >
 </form>
   <a th:href="@{'/deleteStudent/'+${students.student_id}}"><button onclick="return confirmDelete()">Delete</button></a>
+  <br><br>
 </div>
 </body>
 <script th:inline="javascript">
