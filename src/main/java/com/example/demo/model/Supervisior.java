@@ -1,11 +1,9 @@
 package com.example.demo.model;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name="supervisiors",schema = "mydb")
 public class Supervisior {
     private int supervisior_id;
     private String first_name;

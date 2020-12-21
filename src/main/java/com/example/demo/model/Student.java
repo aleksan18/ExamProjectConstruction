@@ -9,7 +9,7 @@ import java.util.Objects;
 public class Student {
     private    int student_id;
     private    String first_name;
-    private    String secound_name;
+    private    String second_name;
     private    int age;
     //replaces class in database as class is keyword in java
     private    String group;
@@ -24,7 +24,7 @@ public class Student {
     public Student(int student_id, String first_name, String secound_name, int age, String group, String phone_number, String email, String address, int supervisior_id) {
         this.student_id = student_id;
         this.first_name = first_name;
-        this.secound_name = secound_name;
+        this.second_name = secound_name;
         this.age = age;
         this.group = group;
         this.phone_number = phone_number;
@@ -52,12 +52,12 @@ public class Student {
     }
     @Basic
     @Column(name = "second_name",nullable = false)
-    public String getSecound_name() {
-        return secound_name;
+    public String getSecond_name() {
+        return second_name;
     }
 
-    public void setSecound_name(String secound_name) {
-        this.secound_name = secound_name;
+    public void setSecond_name(String second_name) {
+        this.second_name = second_name;
     }
     @Basic
     @Column(name = "age",nullable = false)
@@ -119,7 +119,7 @@ public class Student {
         return "Student{" +
                 "student_id=" + student_id +
                 ", first_name='" + first_name + '\'' +
-                ", secound_name='" + secound_name + '\'' +
+                ", secound_name='" + second_name + '\'' +
                 ", age=" + age +
                 ", group='" + group + '\'' +
                 ", phone_number='" + phone_number + '\'' +
@@ -138,7 +138,7 @@ public class Student {
                 age == student.age &&
                 supervisior_id == student.supervisior_id &&
                 Objects.equals(first_name, student.first_name) &&
-                Objects.equals(secound_name, student.secound_name) &&
+                Objects.equals(second_name, student.second_name) &&
                 Objects.equals(group, student.group) &&
                 Objects.equals(phone_number, student.phone_number) &&
                 Objects.equals(email, student.email) &&
@@ -147,7 +147,7 @@ public class Student {
 
     @Override
     public int hashCode() {
-        return Objects.hash(student_id, first_name, secound_name, age, group, phone_number, email, address, supervisior_id);
+        return Objects.hash(student_id, first_name, second_name, age, group, phone_number, email, address, supervisior_id);
     }
 
 }
